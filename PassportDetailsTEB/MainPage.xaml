@@ -6,7 +6,7 @@
              BackgroundColor="#5F9EA0">
 
     <VerticalStackLayout Padding="20">
-        <Grid ColumnDefinitions="Auto, Auto, *, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnSpacing="20" RowSpacing="10">
+        <Grid ColumnDefinitions="Auto, Auto, *, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnSpacing="40" RowSpacing="10">
             <Label Text="Numer" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
             <Entry x:Name="EntryNumer" Grid.Row="0" Grid.Column="1" WidthRequest="200" BackgroundColor="#F0FFFF" TextChanged="OnEntryNumerTextChanged" TextColor="Black"/>
 
@@ -27,7 +27,7 @@
             </Frame>
 
             <Image x:Name="ImageZdjecie" Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" HeightRequest="270" Aspect="AspectFit" Source="nullzdjecie.jpg" />
-            <Image x:Name="ImageOdcisk" Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" HeightRequest="270" Aspect="AspectFit" Source="odcisk444.png"/>
+            <Image x:Name="ImageOdcisk" Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" HeightRequest="270" Aspect="AspectFit" Source="nullodcisk.png"/>
 
             <Button Text="OK" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="#F0FFFF" 
                     Clicked="OnOkButtonClicked" HorizontalOptions="Center" Padding="150, 0" VerticalOptions="End"/>

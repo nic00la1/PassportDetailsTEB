@@ -10,26 +10,28 @@
         private void OnEntryNumerTextChanged(object sender, TextChangedEventArgs e)
         {
             string numer = EntryNumer.Text;
-            string zdjeciePath = Path.Combine("Resources", "Images", $"zdjecie{numer}.png");
-            string odciskPath = Path.Combine("Resources", "Images", $"odcisk{numer}.png");
-            string nullzdjecie = Path.Combine("Resources", "Images", $"nullzdjecie.jpg");
+            string zdjeciePath = $"zdjecie{numer}.png";
+            string odciskPath = $"odcisk{numer}.png";
+            string nullzdjecie = "nullzdjecie.jpg";
+            string nullodcisk = "nullodcisk.png";
+
 
             if (File.Exists(zdjeciePath))
             {
-                ImageZdjecie.Source = ImageSource.FromFile(zdjeciePath);
+                ImageZdjecie.Source = zdjeciePath;
             }
             else
             {
-                ImageZdjecie.Source = ImageSource.FromFile(nullzdjecie);
+                ImageZdjecie.Source =  nullzdjecie;
             }
 
             if (File.Exists(odciskPath))
             {
-                ImageOdcisk.Source = ImageSource.FromFile(odciskPath);
+                ImageOdcisk.Source = odciskPath;
             }
             else
             {
-                ImageOdcisk.Source = ImageSource.FromFile(nullzdjecie);
+                ImageOdcisk.Source = nullodcisk;
             }
         }
 

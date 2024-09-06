@@ -56,6 +56,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\nullodcisk.png" />
 	  <None Remove="Resources\Images\nullzdjecie.jpg" />
 	  <None Remove="Resources\Images\odcisk333.png" />
 	  <None Remove="Resources\Images\odcisk444.png" />
