@@ -6,7 +6,7 @@
              BackgroundColor="#5F9EA0">
 
     <VerticalStackLayout Padding="20">
-        <Grid ColumnDefinitions="Auto, Auto, *, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnSpacing="20" RowSpacing="10">
+        <Grid ColumnDefinitions="Auto, Auto, *, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnSpacing="20" RowSpacing="10">
             <Label Text="Numer" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
             <Entry x:Name="EntryNumer" Grid.Row="0" Grid.Column="1" WidthRequest="200" BackgroundColor="#F0FFFF" TextChanged="OnEntryNumerTextChanged" TextColor="Black"/>
 
@@ -16,20 +16,21 @@
             <Label Text="Nazwisko" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" />
             <Entry x:Name="EntryNazwisko" Grid.Row="2" Grid.Column="1" WidthRequest="200" BackgroundColor="#F0FFFF" TextColor="Black"/>
 
-            <Label Text="Kolor oczu" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" />
-            <Frame Grid.Row="3" Grid.Column="1" Padding="3" BackgroundColor="White" BorderColor="White">
+            <Label Text="Kolor oczu" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" 
+                   FontAttributes="Bold"/>
+            <Frame Grid.Row="4" Grid.Column="1" Padding="3" BackgroundColor="White" BorderColor="White">
                 <StackLayout Orientation="Vertical" BackgroundColor="#5F9EA0">
                     <RadioButton x:Name="RadioNiebieskie" Content="niebieskie" IsChecked="True" />
                     <RadioButton x:Name="RadioZielone" Content="zielone" />
                     <RadioButton x:Name="RadioPiwne" Content="piwne" />
                 </StackLayout>
             </Frame>
-           
-
-            <Button Text="OK" Grid.Row="4" Grid.Column="1" BackgroundColor="#F0FFFF" Clicked="OnOkButtonClicked" />
 
             <Image x:Name="ImageZdjecie" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" HeightRequest="180" Aspect="AspectFit" Source="nullzdjecie.jpg" />
-            <Image x:Name="ImageOdcisk" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" HeightRequest="180" Aspect="AspectFit" Source="nullzdjecie.jpg"/>
+            <Image x:Name="ImageOdcisk" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" HeightRequest="180" Aspect="AspectFit" Source="odcisk444.png"/>
+
+            <Button Text="OK" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="#F0FFFF" 
+                    Clicked="OnOkButtonClicked" HorizontalOptions="Center" Padding="150, 0" VerticalOptions="Center"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
