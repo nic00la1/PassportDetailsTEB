@@ -9,30 +9,7 @@
 
         private void OnEntryNumerTextChanged(object sender, TextChangedEventArgs e)
         {
-            string numer = EntryNumer.Text;
-            string zdjeciePath = $"zdjecie{numer}.png";
-            string odciskPath = $"odcisk{numer}.png";
-            string nullzdjecie = "nullzdjecie.jpg";
-            string nullodcisk = "nullodcisk.png";
-
-
-            if (File.Exists(zdjeciePath))
-            {
-                ImageZdjecie.Source = zdjeciePath;
-            }
-            else
-            {
-                ImageZdjecie.Source =  nullzdjecie;
-            }
-
-            if (File.Exists(odciskPath))
-            {
-                ImageOdcisk.Source = odciskPath;
-            }
-            else
-            {
-                ImageOdcisk.Source = nullodcisk;
-            }
+            UpdateImages();
         }
 
         private void OnOkButtonClicked(object sender, EventArgs e)
@@ -49,6 +26,35 @@
             else
             {
                 DisplayAlert("Dane paszportowe", $"{imie} {nazwisko} kolor oczu {kolorOczu}", "OK");
+                UpdateImages();
+            }
+        }
+
+        private void UpdateImages()
+        {
+            string numer = EntryNumer.Text;
+            string projectDirectory = @"C:\Users\admin\source\repos\PassportDetailsTEB\PassportDetailsTEB";
+            string zdjeciePath = Path.Combine(projectDirectory, "Resources", "Images", $"zdjecie{numer}.png");
+            string odciskPath = Path.Combine(projectDirectory, "Resources", "Images", $"odcisk{numer}.png");
+            string nullzdjecie = Path.Combine(projectDirectory, "Resources", "Images", "nullzdjecie.jpg");
+            string nullodcisk = Path.Combine(projectDirectory, "Resources", "Images", "nullodcisk.png");
+
+            if (File.Exists(zdjeciePath))
+            {
+                ImageZdjecie.Source = ImageSource.FromFile(zdjeciePath);
+            }
+            else
+            {
+                ImageZdjecie.Source = ImageSource.FromFile(nullzdjecie);
+            }
+
+            if (File.Exists(odciskPath))
+            {
+                ImageOdcisk.Source = ImageSource.FromFile(odciskPath);
+            }
+            else
+            {
+                ImageOdcisk.Source = ImageSource.FromFile(nullodcisk);
             }
         }
     }
