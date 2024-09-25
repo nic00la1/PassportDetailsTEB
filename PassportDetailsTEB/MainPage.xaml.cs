@@ -33,7 +33,7 @@
         private void UpdateImages()
         {
             string numer = EntryNumer.Text;
-            string projectDirectory = @"C:\Users\admin\source\repos\PassportDetailsTEB\PassportDetailsTEB";
+            string projectDirectory = @"C:\Users\admin\source\repos\nic00la1\PassportDetailsTEB\PassportDetailsTEB";
             string zdjeciePath = Path.Combine(projectDirectory, "Resources", "Images", $"zdjecie{numer}.png");
             string odciskPath = Path.Combine(projectDirectory, "Resources", "Images", $"odcisk{numer}.png");
             string nullzdjecie = Path.Combine(projectDirectory, "Resources", "Images", "nullzdjecie.jpg");
